@@ -3,7 +3,6 @@
 <?php
 
 include_once("../config.inc.php");
-
 $sql = mysqli_query($conexao, "SELECT * FROM faleconosco");
 
 while ($tabela = mysqli_fetch_array($sql)) {
@@ -11,7 +10,7 @@ while ($tabela = mysqli_fetch_array($sql)) {
     echo "Email: $tabela[email] <br>";
     echo "Telefone: $tabela[telefone] <br>";
     echo "Assunto: $tabela[mensagem] <br>";
-    echo "<a href=?pg=excluir&id=$tabela[id]><b>Excluir Mensagem</b></a>";
+    echo "<a href=?pg=excluir&id=$tabela[id]><b>X</b></a>";
     echo "<hr>";
 }
 
